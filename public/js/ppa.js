@@ -1,11 +1,11 @@
 //const fetch = require('node-fetch')
 
 // fetch this URL then call the response function
-fetch('http://puzzle.mead.io/puzzle').then((response) => {
-   response.json().then((data) => {
-       console.log(data)
-    })
-})
+// fetch('http://puzzle.mead.io/puzzle').then((response) => {
+//    response.json().then((data) => {
+//        console.log(data)
+//     })
+// })
 
 
 
@@ -21,7 +21,10 @@ weatherForm.addEventListener ('submit', (e) => {
     // ordinarilly, the browser would clear the screen at this point.
     // preventDefault() will disable this behavior
     e.preventDefault()
-    const location = 'http://localhost:3000/weather?address=' + element.value
+    //const location = 'http://localhost:3000/weather?address=' + element.value
+    // deleting the prefix above is necessary for our code to run on Heroku server
+    const location = '/weather?address=' + element.value
+
 
     messageOne.textContent ='Loading ...'
     messageTwo.textContent = ''

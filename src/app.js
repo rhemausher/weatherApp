@@ -6,6 +6,10 @@ const forecast = require('./utils/forecast')
 
 const app = express()
 
+// process.env.PORT provides listen port our application should use when running
+// on Heroku.  If not running on Heroku, then use port 3000
+const listenPort = process.env.PORT || 3000
+
 // Define aths for Express config
 const RootDir = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
@@ -123,6 +127,6 @@ app.get('*', (req, res)=> {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000')
+app.listen(listenPort, () => {
+    console.log('Server is up on port: ' + listenPort)
 })

@@ -31,7 +31,7 @@ app.use(express.static(RootDir))       // customize your folder
 // http://localhost:3000
 app.get('', (req, res)=> {
     res.render('index', {
-        title: 'Weather Apple',
+        title: 'Weather App',
         name:'Mark A Jones'
     })
 })

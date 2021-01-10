@@ -12,7 +12,7 @@ const forecast = (lat, lon, callback) => {
                 callback(body.error, undefined)
             } else {
                 callback(undefined,
-                   body.current.weather_descriptions[0] + ':  It is ' + body.current.temperature + ' degrees out. It feels like ' + body.current.feelslike + ' degrees out.  There is a ' + body.current.precip + '% chance of rain' + '  Humidity is ' + body.current.humidity + '  Visibility is ' + body.current.visibility
+                   body.current.weather_descriptions[0] + ':  It is ' + body.current.temperature + ' degrees out. It feels like ' + body.current.feelslike + ' degrees out.  There is a ' + body.current.precip + '% chance of rain' + '  Humidity is ' + body.current.humidity + ' degrees  Visibility is ' + body.current.visibility + ' miles'
                 )
             }
         })
